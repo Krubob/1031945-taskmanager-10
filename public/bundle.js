@@ -86,6 +86,28 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/components/assortmentTemplate.js":
+/*!**********************************************!*\
+  !*** ./src/components/assortmentTemplate.js ***!
+  \**********************************************/
+/*! exports provided: createAssortmentTemplate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createAssortmentTemplate", function() { return createAssortmentTemplate; });
+const createAssortmentTemplate = () =>
+  `<div class="board__filter-list">
+  <a href="#" class="board__filter">SORT BY DEFAULT</a>
+  <a href="#" class="board__filter">SORT BY DATE up</a>
+  <a href="#" class="board__filter">SORT BY DATE down</a>
+</div>`;
+
+
+
+
+/***/ }),
+
 /***/ "./src/components/boardTemplate.js":
 /*!*****************************************!*\
   !*** ./src/components/boardTemplate.js ***!
@@ -247,28 +269,6 @@ const createSiteMenuTemplate = () =>
       >STATISTICS</label
     >
   </section>`;
-
-
-
-
-/***/ }),
-
-/***/ "./src/components/sortingTemplate.js":
-/*!*******************************************!*\
-  !*** ./src/components/sortingTemplate.js ***!
-  \*******************************************/
-/*! exports provided: createSortingTemplate */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSortingTemplate", function() { return createSortingTemplate; });
-const createSortingTemplate = () =>
-  `<div class="board__filter-list">
-  <a href="#" class="board__filter">SORT BY DEFAULT</a>
-  <a href="#" class="board__filter">SORT BY DATE up</a>
-  <a href="#" class="board__filter">SORT BY DATE down</a>
-</div>`;
 
 
 
@@ -653,11 +653,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_siteMenuTemplate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/siteMenuTemplate.js */ "./src/components/siteMenuTemplate.js");
 /* harmony import */ var _components_filterTemplate_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/filterTemplate.js */ "./src/components/filterTemplate.js");
 /* harmony import */ var _components_boardTemplate_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/boardTemplate.js */ "./src/components/boardTemplate.js");
-/* harmony import */ var _components_sortingTemplate_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/sortingTemplate.js */ "./src/components/sortingTemplate.js");
+/* harmony import */ var _components_assortmentTemplate_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/assortmentTemplate.js */ "./src/components/assortmentTemplate.js");
 /* harmony import */ var _components_taskEditTemplate_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/taskEditTemplate.js */ "./src/components/taskEditTemplate.js");
 /* harmony import */ var _components_taskTemplate_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/taskTemplate.js */ "./src/components/taskTemplate.js");
 /* harmony import */ var _components_moreButtonTemplate_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/moreButtonTemplate.js */ "./src/components/moreButtonTemplate.js");
-
 
 
 
@@ -682,7 +681,7 @@ render(siteMainElement, Object(_components_boardTemplate_js__WEBPACK_IMPORTED_MO
 const boardElement = siteMainElement.querySelector(`.board`);
 const taskListElement = siteMainElement.querySelector(`.board__tasks`);
 
-render(boardElement, Object(_components_sortingTemplate_js__WEBPACK_IMPORTED_MODULE_3__["createSortingTemplate"])(), `afterbegin`);
+render(boardElement, Object(_components_assortmentTemplate_js__WEBPACK_IMPORTED_MODULE_3__["createAssortmentTemplate"])(), `afterbegin`);
 render(taskListElement, Object(_components_taskEditTemplate_js__WEBPACK_IMPORTED_MODULE_4__["createTaskEditTemplate"])(), `beforeend`);
 
 for (let i = 0; i < TASK_COUNT; i++) {
